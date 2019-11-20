@@ -1,13 +1,15 @@
 import React, { HTMLAttributes } from 'react'
+import NavBar from '../NavBar'
 import debugMx from '../../../common/debug-mx';
-export interface IAppTemplateProps extends React.DetailedHTMLProps<HTMLAttributes<HTMLDivElement>,HTMLDivElement>{
-    childrenWrapperClassName?:string;
+export interface IAppTemplateProps extends React.Props<any>{
+    container?:boolean;
 }
 export default function(props:IAppTemplateProps){
-    let {childrenWrapperClassName,...outerAttr} = props;
-    return <div {...outerAttr}>
+    let containerClassName = props.container === false ? "" : "container";
+    return <div>
         <div className="w-100 h-100 d-flex flex-column">
-            <div className={"flex-grow-1 " + (props.childrenWrapperClassName || "")}>
+            <NavBar/>
+            <div className={`flex-grow-1 ${containerClassName}`}>
                 {props.children}
             </div>
             <footer className="flex-grow-0">

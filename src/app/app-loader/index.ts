@@ -7,9 +7,9 @@ class AppLoader {
         await topPace.init(document.querySelector("#__global-pace") as HTMLDivElement);
         await this.installSWIfNeed();
         await this.loadLib();
-        if(thereIsHomePage() && process.env.NODE_ENV === "production"){
-            await wait(1937);
-        }
+        // if(thereIsHomePage() && process.env.NODE_ENV === "production"){
+        //     await wait(1937);
+        // }
         await this.loadApp();
     }
     // @percentSpan(5, 10)

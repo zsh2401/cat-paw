@@ -3,9 +3,9 @@
   "version": "0.1",
   "sz_rat": {
     "version": "0.6.6",
-    "vname":"Lee",
-    "description":"Seymour Zhang's React Application Template",
-    "repo":"https://github.com/zsh2401/sz-rat"
+    "vname": "Lee",
+    "description": "Seymour Zhang's React Application Template",
+    "repo": "https://github.com/zsh2401/sz-rat"
   },
   "description": "Lee Yin's cat paw.",
   "main": "./scripts/server",
@@ -77,6 +77,7 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
-    "react-use": "^13.8.0"
+    "react-use": "^13.8.0",
+    "rsuite": "^4.1.1"
   }
 }

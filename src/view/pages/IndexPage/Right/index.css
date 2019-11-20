@@ -1,0 +1,10 @@
+.card{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px black;
+}
+.iamgift{
+  border-width: 1px;
+  width: 100%;
+}
