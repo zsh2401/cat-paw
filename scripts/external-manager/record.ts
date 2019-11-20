@@ -15,6 +15,7 @@ const record:IRecord = {
     "rsuite_css":{contentURL:"https://cdn.jsdelivr.net/npm/rsuite@4.1.1/dist/styles/rsuite-default.min.css"},
     "rsuite":{alias:"rsuite",contentURL:"https://cdn.jsdelivr.net/npm/rsuite@4.1.1/dist/rsuite.min.js"},
 
+    "animate.css":{contentURL:"https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"},
     "lodash":{alias:"_",contentURL:"https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"}
 }
 export default record;

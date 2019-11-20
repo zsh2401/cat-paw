@@ -1,10 +1,10 @@
 // console.log("wtf");
 import OfflinePluginRuntime from 'offline-plugin/runtime'
-import * as topPace from '../../common/view-helper/top-pace'
+// import * as topPace from '../../common/view-helper/top-pace'
 import externalLoader from '../../common/external-loader';
 class AppLoader {
     public async run() {
-        await topPace.init(document.querySelector("#__global-pace") as HTMLDivElement);
+        // await topPace.init(document.querySelector("#__global-pace") as HTMLDivElement);
         await this.installSWIfNeed();
         await this.loadLib();
         // if(thereIsHomePage() && process.env.NODE_ENV === "production"){
@@ -39,13 +39,14 @@ class AppLoader {
         }
     }
     private get percent() {
-        return topPace.percentGetter();
+        return 0;
+        // return topPace.percentGetter();
     }
     private async setPercentAsync(value:number){
-        topPace.percentSetterAnimated(value);
+        // topPace.percentSetterAnimated(value);
     }
     private set percent(value: number) {
-        topPace.percentSetterAnimated(value);
+        // topPace.percentSetterAnimated(value);
     }
 }
 new AppLoader().run();

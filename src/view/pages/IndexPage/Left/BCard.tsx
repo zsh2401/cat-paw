@@ -10,6 +10,7 @@ export interface BCardProps extends StdProps {
 }
 const BCardOuterStyle: CSSProperties = {
     // height: "100px",
+    cursor:"pointer",
     width: "100%",
 }
 const BCardInnerStyle: CSSProperties = {
