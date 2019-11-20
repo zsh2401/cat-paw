@@ -30,11 +30,16 @@ export default function Clock() {
         hCountdownSetter(time)
     });
 
+    let wrapperEle: HTMLDivElement;
     const history = useHistory();
     const goBack = () => {
-        history.go(-1);
+        wrapperEle.classList.remove("zoomIn");
+        wrapperEle.classList.add("zoomOut");
+        setTimeout(() => {
+            history.go(-1);
+        }, 600);
     }
-    return <div className={`h-100 ${style.clockbg}`}>
+    return <div ref={ele => wrapperEle = ele as HTMLDivElement} className={`animated zoomIn h-100 ${style.clockbg}`}>
         <div className="container text-white">
             <h1>The Timecounter</h1>
             <p>"Lost time is never found again." – Benjamin Franklin.</p>
