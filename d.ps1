@@ -1,0 +1,1 @@
+(yarn build) -and (yarn deploy)

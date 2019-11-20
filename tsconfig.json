@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es5",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "removeComments": true,
+    "strictNullChecks": true,
+    "experimentalDecorators":true,
+    "strictBindCallApply": true,
+    "noImplicitAny": true,
+    "noImplicitReturns":true,
+    "allowSyntheticDefaultImports":true
+  },
+  "include": ["./src/*", "src/app/server.ts"],
+  "exclude": ["node_modules"]
+}

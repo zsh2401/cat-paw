@@ -1,0 +1,16 @@
+/* 应用的全局CSS */
+:global(*){
+    font-family: Microsoft YaHei UI Light,Microsoft YaHei, sans-serif;
+}
+:global(.safe-area){
+    width: 100%;
+    height: 100%;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+:global(.padding-safe-bottom){
+    padding-bottom: env(safe-area-inset-bottom);
+}
+:global(.padding-safe-top){
+    padding-top: env(safe-area-inset-top);
+}
