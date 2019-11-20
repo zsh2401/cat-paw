@@ -1,13 +1,13 @@
 {
-  "name": "sz-rat-app",
-  "version": "0.6.6",
+  "name": "yin-s-cat-paw",
+  "version": "0.1",
   "sz_rat": {
     "version": "0.6.6",
     "vname":"Lee",
     "description":"Seymour Zhang's React Application Template",
     "repo":"https://github.com/zsh2401/sz-rat"
   },
-  "description": "An application based powered by sz-rat",
+  "description": "Lee Yin's cat paw.",
   "main": "./scripts/server",
   "scripts": {
     "serv": "ts-node --project ./scripts/server/tsconfig.json  ./scripts/server",
