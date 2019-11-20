@@ -2,8 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { Divider } from 'rsuite';
 import debugMx from '../../../common/debug-mx';
-export default function Footer() {
-    return <footer>
+import StdProps from '../../../common/std-props';
+export default function Footer(props:StdProps) {
+    return <footer {...props}>
         <div className="d-flex justify-content-center" style={{ marginTop: "10px" }}>
             <Link to="/about/pwa">安装到桌面</Link><Divider vertical />
             <Link to="/about/opensource">开放源代码</Link><Divider vertical />
