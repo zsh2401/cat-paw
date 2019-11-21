@@ -70,6 +70,7 @@
     "webpack-parallel-uglify-plugin": "^1.1.2"
   },
   "dependencies": {
+    "@types/swiper": "^5.2.0",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
@@ -78,6 +79,7 @@
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
     "react-use": "^13.8.0",
-    "rsuite": "^4.1.1"
+    "rsuite": "^4.1.1",
+    "swiper": "^5.2.1"
   }
 }

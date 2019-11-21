@@ -6,7 +6,7 @@ export default function () {
         <Divider>去哪咧?</Divider>
         <div className="row">
             <BCard to="/flow" name="-Flow-" description="我的心流...你是否感知到?" />
-            <BCard to="/read/promises" name="承诺" description="我不会开出空头支票" />
+            <BCard to="/read/promises" name="承诺" description="不是空头支票..." />
             <BCard to="/fragment/loveclock" name="TimeCounter!" description={"\"时间是表征物质运动的最基本物理量,是人类文明发展中的一个重要组成部分\""} />
             <BCard to="/read/loveletters" name="嘿嘿,情书" description={"虽然我语文不好!但我就是要写!不服咬我!"} />
         </div>

@@ -43,7 +43,7 @@ class AppLoader {
     // @percentSpan(null, 100)
     private async loadApp() {
         try {
-            await import(/*webpackChunkName:"app"*/"../App")
+            await import( /*webpackChunkName:"app" */ "../App")
         } catch (err) {
             console.error(err);
         }

@@ -18,12 +18,12 @@ export default function Reader(props: any) {
         </div>
         <div className="container d-none d-md-block">
             {
-                one ? <img src={one.imgSrc} className="img-fluid" /> : "Not Found!"
+                one ? <img src={one.imgSrc} className="d-block mr-auto ml-auto img-fluid" /> : "Not Found!"
             }
         </div>
         <div className="d-block d-sm-none">
             {
-                one ? <img src={one.imgSrc} className="img-fluid" /> : "Not Found!"
+                one ? <img src={one.imgSrc} className="d-block mr-auto ml-auto img-fluid" /> : "Not Found!"
             }
         </div>
     </div>

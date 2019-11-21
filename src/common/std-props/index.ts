@@ -1,8 +1,7 @@
 import { CSSProperties } from "react";
 
-export default interface StdProps{
+export default interface IStdProps extends React.Props<any>{
     className?:string;
     id?:string;
     style?:CSSProperties;
-    children?: React.ReactNode;
 }
