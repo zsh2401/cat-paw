@@ -6,10 +6,9 @@ export interface ILazyLoadProps extends IStdProps {
     children: any;
 }
 export default function LazyLoad(props: ILazyLoadProps) {
-    console.log( props);
     if (props.request === "ready") {
-        return <div {...props}>.</div>
+        return <div {...props}><h1/></div>
     } else {
-        return props.children;
+        return <div {...props}>{props.children}</div>
     }
 }
