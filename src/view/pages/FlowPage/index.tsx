@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useEffectOnce } from 'react-use';
 import Swiper from 'swiper'
+
 import P1 from './P1';
 import P2 from './P2';
 import P3 from './P3';
@@ -12,7 +13,11 @@ import P8 from './P8';
 import P9 from './P9';
 import P10 from './P10';
 import P11 from './P11';
+
 import LazyLoad from './LazyLoad';
+
+const _______DEBUG_SLIDE________ = 10;
+
 export default function FlowPage() {
 
     let element: HTMLDivElement;
@@ -41,6 +46,10 @@ export default function FlowPage() {
             }
         });
 
+        if (process.env.NODE_ENV === "development") {
+            swiper.slideTo(_______DEBUG_SLIDE________);
+        }
+
         return () => {
             swiper.destroy(true, true);
         }
@@ -49,53 +58,48 @@ export default function FlowPage() {
         <div className="swiper-wrapper">
 
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[0]}>
-                <P1 onRequestNext={()=>slideToNext.fn()} />
+                <P1 onRequestNext={slideToNext.fn} />
             </LazyLoad>
 
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[1]}>
-                <P2 className="animated fadeIn delay-1s slow"/>
+                <P2 className="animated fadeIn delay-1s slow" />
             </LazyLoad>
 
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[2]}>
-                <P3 />
+                <P3 onRequestNext={slideToNext.fn} />
             </LazyLoad>
 
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[3]}>
-                <P4 />
+                <P4 onRequestNext={slideToNext.fn} />
             </LazyLoad>
 
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[4]}>
-                <P5 />
+                <P5 onRequestNext={slideToNext.fn} />
             </LazyLoad>
-            <LazyLoad className="swiper-slide w-100 h-100" request={requests[5]}>
 
+            <LazyLoad className="swiper-slide w-100 h-100" request={requests[5]}>
+                <P6 onRequestNext={slideToNext.fn}/>
             </LazyLoad>
+
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[6]}>
-                <P6 />
+                <P7 onRequestNext={slideToNext.fn}/>
             </LazyLoad>
 
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[7]}>
-                <P7 />
+                <P8 onRequestNext={slideToNext.fn}/>
             </LazyLoad>
 
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[8]}>
-                <P8 />
+                <P9 onRequestNext={slideToNext.fn}/>
             </LazyLoad>
 
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[9]}>
-                <P9 />
+                <P10 onRequestNext={slideToNext.fn}/>
             </LazyLoad>
 
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[10]}>
-                <P10 />
-            </LazyLoad>
-
-            <LazyLoad className="swiper-slide w-100 h-100" request={requests[11]}>
                 <P11 />
             </LazyLoad>
-
-
-
         </div>
     </div>
 }

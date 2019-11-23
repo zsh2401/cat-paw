@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Divider, Button } from 'rsuite'
 import useTicker from '../../../../common/hooks/useTicker'
-import { useTimer, useCountdown } from './timer'
+import { useTimer, useCountdown } from '../../../../common/timer'
 //@ts-ignore
 import style from './index.css'
 import { Link, useHistory } from 'react-router-dom'

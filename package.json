@@ -76,6 +76,7 @@
     "lodash": "^4.17.15",
     "offline-plugin": "^5.0.7",
     "react": "^16.11.0",
+    "react-blur": "^0.6.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
     "react-use": "^13.8.0",

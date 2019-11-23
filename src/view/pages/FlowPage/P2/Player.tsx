@@ -14,7 +14,6 @@ export default class Player extends React.Component<AudioInfo, PlayerState>{
         return document.getElementById("_main_audio") as HTMLAudioElement;
     }
     private onClickButton() {
-        console.log(this.state.playing);
         if (this.state.playing) {
             this.audioElement.pause();
         } else {
@@ -43,7 +42,6 @@ export default class Player extends React.Component<AudioInfo, PlayerState>{
         });
     }
     private onPuase() {
-        console.log("onPause");
         this.setState({
             playing: false,
         });

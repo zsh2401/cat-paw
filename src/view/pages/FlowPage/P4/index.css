@@ -1,0 +1,15 @@
+.bg{
+    background-image: url(./wallhaven-4213wy.jpg);
+    background-size:cover;
+    animation-name: bgAnimate;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes bgAnimate{
+   from{background-position-x: left; }
+   to{background-position-x: center;}
+}

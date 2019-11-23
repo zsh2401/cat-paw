@@ -1,6 +1,5 @@
 import IStdProps from '../../../common/std-props'
-import React, { ReactNode } from 'react';
-import { JsxElement } from 'typescript';
+import React from 'react';
 export interface ILazyLoadProps extends IStdProps {
     request: "ready" | "load";
     children: any;
