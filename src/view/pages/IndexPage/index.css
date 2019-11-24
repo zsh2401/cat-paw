@@ -3,13 +3,25 @@
     background-image: url('./img/wallhaven-r7vv3w.jpg');
     background-size: cover;
     background-attachment:fixed;
-    background-position: 0px -400px;
-    /* padding-top: 80px; */
-    /* padding-bottom: 80px; */
+    background-position-y: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
 }
-.padder{
-  padding-top: 100px;
-  padding-bottom: 200px;
+.nWrapper{
+  flex-grow: 0;
+}
+.titleWrapper{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.j{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .title{
   font-weight: bold;

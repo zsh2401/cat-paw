@@ -1,22 +1,16 @@
-.baseContainer{
-    position: relative;
-    width: 100%;
-    height: 100%;
+.picBg{
+    background-image: url(./assets/wallhaven-2ko3px.jpg);
+    background-size: cover;
+    animation-name: bgAnimation;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    color: white;
 }
-
-.bgVideo{
-    background: black;
-    position: absolute;
-    z-index: 1;
-    height: 100%;
-    margin-right: auto;
-    min-width: 100%;
-    display: block;
-    margin-left: auto;
-}
-.top{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
+/* .bg{
+    background: transparent;
+} */
+@keyframes bgAnimation{
+    from{background-position-x: left;}
+    to{background-position-x: center;}
 }

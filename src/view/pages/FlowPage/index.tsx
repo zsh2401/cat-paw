@@ -1,7 +1,9 @@
+const _______DEBUG_SLIDE________ = 0;
+
+
 import React, { useState } from 'react'
 import { useEffectOnce } from 'react-use';
 import Swiper from 'swiper'
-
 import P1 from './P1';
 import P2 from './P2';
 import P3 from './P3';
@@ -13,10 +15,7 @@ import P8 from './P8';
 import P9 from './P9';
 import P10 from './P10';
 import P11 from './P11';
-
 import LazyLoad from './LazyLoad';
-
-const _______DEBUG_SLIDE________ = 10;
 
 export default function FlowPage() {
 
@@ -78,23 +77,23 @@ export default function FlowPage() {
             </LazyLoad>
 
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[5]}>
-                <P6 onRequestNext={slideToNext.fn}/>
+                <P6 onRequestNext={slideToNext.fn} />
             </LazyLoad>
 
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[6]}>
-                <P7 onRequestNext={slideToNext.fn}/>
+                <P7 onRequestNext={slideToNext.fn} />
             </LazyLoad>
 
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[7]}>
-                <P8 onRequestNext={slideToNext.fn}/>
+                <P8 onRequestNext={slideToNext.fn} />
             </LazyLoad>
 
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[8]}>
-                <P9 onRequestNext={slideToNext.fn}/>
+                <P9 onRequestNext={slideToNext.fn} />
             </LazyLoad>
 
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[9]}>
-                <P10 onRequestNext={slideToNext.fn}/>
+                <P10 onRequestNext={slideToNext.fn} />
             </LazyLoad>
 
             <LazyLoad className="swiper-slide w-100 h-100" request={requests[10]}>

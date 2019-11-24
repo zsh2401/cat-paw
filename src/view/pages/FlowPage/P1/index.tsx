@@ -30,7 +30,7 @@ export default function P1(props: P1Props) {
                 </div>
             </div>
             <div className="flex-grow-0 animated fadeIn delay-3s">
-                <IconButton className="animated infinite slow bounce delay-2s d-block mr-auto ml-auto"
+                <IconButton className="animated infinite slow bounce delay-2s d-block mr-auto ml-auto text-dark"
                     icon={<Icon icon="arrow-down2" />} onClick={onRequestNext} circle />
                 <br /><br />
             </div>

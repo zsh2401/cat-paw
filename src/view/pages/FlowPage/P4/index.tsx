@@ -12,7 +12,8 @@ export default function (props: PProps) {
 
             <div className="flex-grow-1 d-flex flex-column justify-content-center text-center text-white">
                 <div className="container">
-                    <h2 className="animated delay-1s slower fadeInLeft">回忆不断浮现</h2>
+                    <br/>
+                    <h2 className="animated delay-1s slower fadeInUp">回忆不断浮现</h2>
                     <Divider className="animated delay-3s fadeIn"><h4>过去只是未来的羁绊</h4></Divider>
                     <h6 className="animated delay-4s fadeIn">我希望</h6>
                     <h5 className="animated delay-5s fadeIn">希望</h5>

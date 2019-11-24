@@ -6,8 +6,8 @@ import { IconButton, Icon } from 'rsuite'
 import PProps from '../PProps'
 export default function (props: PProps) {
     return <div {...props}>
-        <div className={`${styles.bg} ${styles.f} d-flex flex-column  w-100 h-100 justify-content-center container`}>
-            <div className="d-flex flex-column justify-content-center">
+        <div className={`${styles.bg} ${styles.f} d-flex flex-column  w-100 h-100 justify-content-center`}>
+            <div className="d-flex flex-column justify-content-center container">
                 <br/>
                 <br/>
                 <h1>好吧?</h1>

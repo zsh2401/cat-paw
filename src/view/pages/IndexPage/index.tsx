@@ -11,17 +11,21 @@ import AppTemplate from '../../components/AppTemplate';
 export default function IndexPage() {
   return <AppTemplate nonavbar container={false}>
 
-    <div className={`$jumbotron jumbotron-fluid  ${style.head}`}>
-      <NavBar />
-      <div className={`${style.padder} container`}>
+    <div className={`${style.head}`}>
+      
+      <div className={`${style.nWrapper}`}>
+        <NavBar />
+      </div>
+
+      <div className={`${style.titleWrapper} container`}>
         <h1 className={`d-none d-sm-block ${style.title}`}>Lee Yin's Cat Paw</h1>
         <div className={`d-sm-none ${style.title}`}>
           <h3>Lee Yin's</h3>
           <h1>Cat Paw</h1>
         </div>
-
         <h4 className={style.subtitle}>A small gift for you,Lee Yin.</h4>
       </div>
+
     </div>
     <div className="container">
       <div className="row">

@@ -6,8 +6,8 @@ import { Divider, IconButton, Icon } from 'rsuite'
 import PProps from '../PProps'
 export default function (props: PProps) {
     return <div {...props}>
-        <div className={`${style.bg} h-100 w-100 d-flex flex-column container`}>
-            <div className="flex-grow-1 d-flex flex-column justify-content-center">
+        <div className={`${style.bg} h-100 w-100 d-flex flex-column`}>
+            <div className="flex-grow-1 d-flex flex-column justify-content-center container">
                 <div className="jumbotron jumbotron-fluid bg-transparent text-center">
                     <Divider className="animated fadeIn">
                         <h1 style={{ textDecoration: "underline" }}>
@@ -22,7 +22,7 @@ export default function (props: PProps) {
                     <br /><br />
                     <h4 className="animated fadeIn delay-5s slower">从来不是说说那么简单</h4>
                     <br />
-                    <h2 className="animated fadeInUp delay-7s slower">我<span className="animated fadeIn delay-9s slower">保证</span></h2>
+                    <h2 className="animated fadeIn delay-7s slower">我<span className="animated fadeIn delay-9s slower">保证</span></h2>
                     <br />
                     <div className="animated fadeIn delay-10s slower">
                         <IconButton size="lg" onClick={props.onRequestNext}
