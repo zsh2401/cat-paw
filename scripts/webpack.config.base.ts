@@ -20,7 +20,7 @@ const config: webpack.Configuration = {
 		path: path.resolve(__dirname, '../dist'),
 		publicPath: "/",
 	},
-	
+
 	externals: em.externals,
 
 	module: {
@@ -51,9 +51,33 @@ const config: webpack.Configuration = {
 
 			{
 				test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)?$/,
-				use: {
-					loader: 'url-loader?limit=100000&name=images/[name]_[hash:8].[ext]'
-				}
+				use: [
+					{ loader: 'url-loader?limit=100000&name=images/[name]_[hash:8].[ext]' },
+					{
+						loader: "image-webpack-loader",
+						options: {
+							mozjpeg: {
+								progressive: true,
+								quality: 65
+							},
+							// optipng.enabled: false will disable optipng
+							optipng: {
+								enabled: true,
+							},
+							pngquant: {
+								quality: [0.65, 0.90],
+								speed: 4
+							},
+							gifsicle: {
+								interlaced: false,
+							},
+							// the webp option will enable WEBP
+							webp: {
+								quality: 75
+							}
+						}
+					}
+				]
 			},
 			{
 				test: /\.mp3?$/,
@@ -69,7 +93,7 @@ const config: webpack.Configuration = {
 		new webpack.ProgressPlugin(),
 		new webpack.DefinePlugin({
 			"___CONTENT_URLS": JSON.stringify(em.urls),
-			"___COMPILED_DATE":JSON.stringify(NOW)
+			"___COMPILED_DATE": JSON.stringify(NOW)
 		}),
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, "../src/app/AppPage.ejs"),

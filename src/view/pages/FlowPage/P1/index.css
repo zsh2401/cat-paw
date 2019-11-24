@@ -1,5 +1,6 @@
 .bg{
     background-image: url(./wallhaven-2k3ylx.jpg);
     background-size: cover;
+    background-position-y: center;
     background-attachment: fixed;
 }
