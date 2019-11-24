@@ -20,7 +20,7 @@ const config: webpack.Configuration = {
 		filename: 'js/[name].bundle.[hash].js',
 		chunkFilename: 'js/[name].chunk.[hash].js',
 		path: path.resolve(__dirname, '../dist'),
-		publicPath: "/",
+		// publicPath: "/",
 	},
 
 	externals: em.externals,
@@ -101,7 +101,7 @@ const config: webpack.Configuration = {
 		new webpack.ProgressPlugin(),
 		new webpack.DefinePlugin({
 			"___CONTENT_URLS": JSON.stringify(em.urls),
-			"___COMPILED_DATE": JSON.stringify(NOW)
+			"___COMPILED_DATE": JSON.stringify(NOW.toLocaleString())
 		}),
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, "../src/app/AppPage.ejs"),
