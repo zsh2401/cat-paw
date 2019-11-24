@@ -1,11 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-export default function NavBar() {
-    return <nav className="navbar navbar-expand-sm bg-light navbar-light sticky-top">
+import StdProps from '../../../common/std-props'
+import _ from 'lodash'
+export interface NavBarProps extends StdProps {
+    noIcon?: boolean;
+}
+export default function NavBar(props: NavBarProps) {
+    let { className, noIcon, ...attr } = props;
+    return <nav className={`navbar navbar-expand-sm bg-light navbar-light ${className}`} {...attr}>
         <div className="container">
-            <Link className="navbar-brand" to="/">
-                <img style={{height:"30px"}} className="img-fluid" src={require("../../../app/icon/icon.png")}></img>
-            </Link>
+            {
+                noIcon === true ? null : <Link className="navbar-brand" to="/">
+                    <img style={{ height: "30px" }} className="img-fluid" src={require("../../../app/icon/icon.png")}></img>
+                </Link>
+            }
+
             <Link className="navbar-brand" to="/">Yin's Cat Paw</Link>
 
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -25,8 +34,8 @@ export default function NavBar() {
                     </a>
                         <div className="dropdown-menu">
                             <Link className="dropdown-item" to="/fragment/loveclock">The Clock</Link>
-                            <Link className="dropdown-item" to="/read/promises">承诺列表</Link>
-                            <Link className="dropdown-item" to="/fragment/links">万箭穿心</Link>
+                            <Link className="dropdown-item" to="/read/tea">茶</Link>
+                            {/* <Link className="dropdown-item" to="/fragment/links">万箭穿心</Link> */}
                             <Link className="dropdown-item" to="/read/loveletters">情书</Link>
                         </div>
                     </li>
@@ -38,7 +47,7 @@ export default function NavBar() {
                         <div className="dropdown-menu">
                             <Link className="dropdown-item" to="/about">关于</Link>
                             <Link className="dropdown-item" to="/about/opensource">开源</Link>
-                            <Link className="dropdown-item" to="/about/pwa">添加为PWA</Link>
+                            <Link className="dropdown-item" to="/about/install">安装</Link>
                         </div>
                     </li>
                 </ul>

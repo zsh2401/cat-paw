@@ -102,3 +102,6 @@
     -webkit-animation-delay: 25s;
     animation-delay: 25s;
 }
+:global(.min-h-100){
+    min-height: 100%;
+}

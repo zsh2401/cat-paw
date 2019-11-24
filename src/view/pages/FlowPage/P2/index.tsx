@@ -33,13 +33,11 @@ export default function (props: StdProps) {
     });
     return <div {...props}>
         <div className="w-100 h-100 d-flex flex-column">
-            <div className="flex-grow-0">
-                <h3 className="text-center font-weight-bold">伴随一首音乐</h3>
-                <p className="text-center font-italic">“Without music, life would be a mistake” ― Friedrich Nietzsche</p>
-
-            </div>
 
             <div className="flex-grow-1 d-flex flex-column justify-content-center">
+                <h3 className="text-center font-weight-bold">伴随一首音乐</h3>
+                <p className="text-center font-italic">“Without music, life would be a mistake” ― Friedrich Nietzsche</p>
+                <br/>
                 <div className="swiper-container container" style={{ height: "250px" }} ref={(e) => divElement = e as HTMLDivElement}>
                     <div className="swiper-wrapper">
                         {audios.map(a => {

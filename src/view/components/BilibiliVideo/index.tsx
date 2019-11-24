@@ -5,14 +5,15 @@ export interface BilibiliVideoProps extends React.DetailedHTMLProps<React.HTMLAt
     src: string;
     ratio?: [number, number]
     onLoad?:()=>void;
+    borderRadius?:string;
     name?:string;
 }
 export default function(props:BilibiliVideoProps) {
-    let {src,...attr} = props;
+    let {src,borderRadius,...attr} = props;
     return <ResponsiveRatioWrapper {...attr}>
         {
             //@ts-ignore
-            <iframe name={props.name} onLoad={props.onLoad} className="w-100 h-100" src={src} scrolling="no" border="0" frameBorder="no" framespacing="0" allowFullScreen></iframe>
+            <iframe style={{borderRadius}} name={props.name} onLoad={props.onLoad} className="w-100 h-100" src={src} scrolling="no" border="0" frameBorder="no" framespacing="0" allowFullScreen></iframe>
         }
     </ResponsiveRatioWrapper>
 }

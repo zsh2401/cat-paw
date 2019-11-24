@@ -6,7 +6,7 @@ import styles from './index.css'
 import PProps from '../PProps'
 export default function (props: PProps) {
     return <div {...props}>
-        <div className={`${styles.bg} h-100 w-100 d-flex flex-column text-md-center`}>
+        <div className={`${styles.bg} h-100 w-100 d-flex flex-column`}>
 
             <div className="flex-grow-0 container">
                 <h1 className="animated zoomIn slower delay-1s">How</h1>

@@ -17,9 +17,9 @@ export default function (props: PProps) {
                     <p className="animated fadeIn delay-5s slow">其实,为了我们的未来<br/>
                     我做了很多理性分析与思考</p>
                     <p className="animated fadeIn delay-7s slow">我的结论是</p>
-                    <h4 className="animated fadeIn delay-9s slow">我们的爱是具有可见与可行性的</h4>
+                    <h5 className="animated fadeIn delay-9s slow" style={{textDecoration:"underline"}}>我们的爱是具有可见与可行性的</h5>
                     <br />
-                    <h1 className="animated fadeIn delay-10s slow">
+                    <h2 className="animated fadeIn delay-10s slow font-weight-bold">
                         <span className="animated fadeIn delay-10s slow">I</span>
                         <span className="animated fadeIn delay-11s slow">t</span>
                         <span className="animated fadeIn delay-13s slow">'</span>
@@ -29,13 +29,12 @@ export default function (props: PProps) {
                         <span className="animated fadeIn delay-14s slow">o</span>
                         <span className="animated fadeIn delay-13s slow">s</span>
                         <span className="animated fadeIn delay-12s slow">s</span>
-                        <span className="animated fadeIn delay-11s slow">s</span>
                         <span className="animated fadeIn delay-11s slow">i</span>
                         <span className="animated fadeIn delay-13s slow">b</span>
                         <span className="animated fadeIn delay-12s slow">l</span>
                         <span className="animated fadeIn delay-14s slow">e</span>
                         <span className="animated fadeIn delay-10s slow">!</span>
-                    </h1>
+                    </h2>
                     <div className="animated fadeIn delay-17s slow">
                         <Divider>lrc</Divider>
                         <p className="font-italic">And in your dreams you’ll see me falling, falling</p>

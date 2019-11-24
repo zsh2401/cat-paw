@@ -12,7 +12,7 @@ export default function (props: PProps) {
         <div className={`${weatherStyle.weatherbg} h-100 w-100 d-flex flex-column`}>
             <div className="flex-grow-1 container text-center d-flex flex-column justify-content-center">
                 <p className="animated fadeIn slower delay-1s">我希望,我希望</p>
-                <h2 className="animated fadeIn slow delay-3s">我们可以一直走下去</h2>
+                <h3 className="animated fadeIn slow delay-3s">我们可以一直走下去</h3>
                 <div className="animated fadeIn slow delay-6s" >
                     <div className={`${weatherStyle.weather} ${weatherStyle.snowy}`}></div>
                     <p className="text-center">坚信着这份爱,不畏流言蜚语</p>

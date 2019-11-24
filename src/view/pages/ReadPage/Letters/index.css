@@ -1,7 +1,7 @@
 .head{
-    background-image: url(https://w.wallhaven.cc/full/eo/wallhaven-eoprd8.png);
+    background-image: url(./wallhaven-eoprd8.png);
     background-size: cover;
-    background-position-y: -200px;
+    background-position-y: center;
     height: 40vh;
     padding-bottom: 10vh;
     border-radius: 5px;

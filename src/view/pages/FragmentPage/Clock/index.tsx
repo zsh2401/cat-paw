@@ -5,6 +5,7 @@ import { useTimer, useCountdown } from '../../../../common/timer'
 //@ts-ignore
 import style from './index.css'
 import { Link, useHistory } from 'react-router-dom'
+import NavBar from '../../../components/NavBar'
 export type Time = [string, string, string, string];
 const BEGIN = new Date(2019, 3, 14, 20, 0, 0);
 
@@ -39,14 +40,18 @@ export default function Clock() {
             history.go(-1);
         }, 600);
     }
-    return <div ref={ele => wrapperEle = ele as HTMLDivElement} className={`animated zoomIn h-100 ${style.clockbg}`}>
-        <div className="container text-white">
-            <h1>The Timecounter</h1>
-            <p>"Lost time is never found again." – Benjamin Franklin.</p>
+    return <div ref={ele => wrapperEle = ele as HTMLDivElement} className={`animated zoomIn ${style.minh100} ${style.clockbg}`}>
+        <NavBar className="bg-transparent navbar-dark" noIcon />
+        <div className="min-h-100 container text-white d-flex flex-column justify-content-center">
+            <h1 className="d-none d-sm-block" style={{textDecoration:"underline"}}>The Timecounter</h1>
+            <div className="d-block d-sm-none">
+                <h1>The</h1>
+                <h1>Timecounter</h1>
+            </div>
             <br /><br />
             <div>
                 <h4>我们已经相爱</h4>
-                <h2>{loveTime[0]}天{loveTime[1]}时{loveTime[2]}分{loveTime[3]}秒</h2>
+                <h3>{loveTime[0]}天{loveTime[1]}时{loveTime[2]}分{loveTime[3]}秒</h3>
                 <p>从2019年3月14日20:00起</p>
             </div>
             <Divider />
@@ -56,7 +61,8 @@ export default function Clock() {
                     <p>2020年4月11日20:00</p>
                 </div>
                 <div className="flex-grow-0">
-                    <h6 style={{ fontWeight: "bold" }}>{hCountdown[0]}天{hCountdown[1]}时{hCountdown[2]}分{hCountdown[3]}秒</h6>
+                    <h6 className="d-none d-sm-block font-weight-bold">{hCountdown[0]}天{hCountdown[1]}时{hCountdown[2]}分{hCountdown[3]}秒</h6>
+                    <p className="d-block d-none-sm" style={{ fontWeight: "bold" }}>{hCountdown[0]}天{hCountdown[1]}时{hCountdown[2]}分{hCountdown[3]}秒</p>
                 </div>
             </div>
             <Divider />
@@ -66,7 +72,8 @@ export default function Clock() {
                     <p>从2001年5月29日起</p>
                 </div>
                 <div className="flex-grow-0">
-                    <h6 style={{ fontWeight: "bold" }}>{byTime[0]}天{byTime[1]}时{byTime[2]}分{byTime[3]}秒</h6>
+                    <h6 className="d-none d-sm-block font-weight-bold">{byTime[0]}天{byTime[1]}时{byTime[2]}分{byTime[3]}秒</h6>
+                    <p className="d-block d-none-sm" style={{ fontWeight: "bold" }}>{byTime[0]}天{byTime[1]}时{byTime[2]}分{byTime[3]}秒</p>
                 </div>
             </div>
             <Divider />
@@ -76,13 +83,14 @@ export default function Clock() {
                     <p>从1999年11月25日起</p>
                 </div>
                 <div className="flex-grow-0">
-                    <h6 style={{ fontWeight: "bold" }}>{bzTime[0]}天{bzTime[1]}时{bzTime[2]}分{bzTime[3]}秒</h6>
+                    <h6 className="d-none d-sm-block font-weight-bold">{bzTime[0]}天{bzTime[1]}时{bzTime[2]}分{bzTime[3]}秒</h6>
+                    <p className="d-block d-none-sm" style={{ fontWeight: "bold" }}>{bzTime[0]}天{bzTime[1]}时{bzTime[2]}分{bzTime[3]}秒</p>
                 </div>
             </div>
             <Divider />
-            <p className="text-center">可,青涩约定中的那一天,还有多久呢?...<br /><br />
-                <Button color="blue" onClick={goBack} appearance="ghost"><h5>返回主页</h5></Button>
-            </p>
+            <p className="text-center">青涩约定中的那一天,还有多久?...</p><br /> <br />
+            {/* <Button className="d-block mr-auto ml-auto text-white border-white" onClick={goBack} appearance="ghost"><h5>返回主页</h5></Button> */}
+            <br />
         </div>
     </div>
 }

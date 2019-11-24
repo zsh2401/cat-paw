@@ -7,6 +7,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
 import em from './external-manager'
+const NOW = new Date();
 const config: webpack.Configuration = {
 	entry: {
 		apploader: path.resolve(__dirname, '../src/app/app-loader'),
@@ -54,6 +55,12 @@ const config: webpack.Configuration = {
 					loader: 'url-loader?limit=100000&name=images/[name]_[hash:8].[ext]'
 				}
 			},
+			{
+				test: /\.mp3?$/,
+				use: {
+					loader: 'file-loader?name=assets/[name]_[hash:8].[ext]'
+				}
+			},
 		]
 	},
 	// externals: helper.EXTERNALS,
@@ -61,7 +68,8 @@ const config: webpack.Configuration = {
 	plugins: [
 		new webpack.ProgressPlugin(),
 		new webpack.DefinePlugin({
-			"___CONTENT_URLS": JSON.stringify(em.urls)
+			"___CONTENT_URLS": JSON.stringify(em.urls),
+			"___COMPILED_DATE":JSON.stringify(NOW)
 		}),
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, "../src/app/AppPage.ejs"),

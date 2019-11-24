@@ -3,19 +3,17 @@ import * as React from 'react';
 import style from './index.css'
 import Left from './Left';
 import Right from './Right';
-import NavBar from './NavBar';
 import debugMx from '../../../common/debug-mx';
 import { Button, Divider } from 'rsuite';
 import { Link } from 'react-router-dom';
 import AppTemplate from '../../components/AppTemplate';
+import NavBar from '../../components/NavBar';
 export default function IndexPage() {
   return <AppTemplate nonavbar container={false}>
 
     <div className={`${style.head}`}>
       
-      <div className={`${style.nWrapper}`}>
-        <NavBar />
-      </div>
+       <NavBar noIcon className="flex-grow-0 bg-transparent navbar-dark position-sticky" />
 
       <div className={`${style.titleWrapper} container`}>
         <h1 className={`d-none d-sm-block ${style.title}`}>Lee Yin's Cat Paw</h1>

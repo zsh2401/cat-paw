@@ -23,12 +23,12 @@ export default class Player extends React.Component<AudioInfo, PlayerState>{
     componentDidMount() {
         this.audioElement.addEventListener("pause", () => this.onPuase());
         this.audioElement.addEventListener("playing", () => this.onPlaying());
-        this.audioElement.volume = 0.1;
+        this.audioElement.volume = this.props.volume || 0.1;
         const that = this;
         if (process.env.NODE_ENV !== "development") {
             setTimeout(() => {
                 that.audioElement.play();
-            }, 2000);
+            }, 1000);
         }
     }
     componentDidUpdate(prevProps: AudioInfo, prvState: PlayerState) {
@@ -37,6 +37,7 @@ export default class Player extends React.Component<AudioInfo, PlayerState>{
         }
     }
     private onPlaying() {
+        this.audioElement.volume = this.props.volume || 0.1;
         this.setState({
             playing: true,
         });
