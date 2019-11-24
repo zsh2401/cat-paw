@@ -19,7 +19,7 @@ export default function (props: IAppTemplateProps) {
                 }
             </div>
 
-            <div className={`flex-grow-1 ${containerClassName}`}>
+            <div className={`flex-grow-1 d-flex flex-column flex-stretch ${containerClassName}`}>
                 {props.children}
             </div>
 

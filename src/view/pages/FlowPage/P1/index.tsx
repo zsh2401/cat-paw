@@ -13,12 +13,9 @@ export default function P1(props: P1Props) {
     const { onRequestNext, ...htmlAttr } = props;
     return <div {...htmlAttr}>
         <div className={`d-flex flex-column h-100 text-white ${style.bg}`}>
-            {/* <div className="flex-grow-0">
-                <img className="d-block mr-auto ml-auto" src={require("./tumblr_n63plyhz5t1qk9powo1_500.gif")} />
-            </div> */}
             <div className="flex-grow-1 d-flex align-items-stretch">
                 <div className="h-100 w-100 d-flex flex-column justify-content-center">
-                    <div className="animated zoomIn slow text-center">
+                    <div className="animated fadeIn slow text-center">
                         <h1 className="font-weight-bold" style={{ textDecoration: "underline" }}>FLOW</h1>
                         <p className="animated fadeIn delay-2s">我真的有许多许多话想对你说...</p>
                         <br /><br />

@@ -6,7 +6,7 @@ export default function OpenSource() {
         <p className="font-italic text-center">Yin's Cat Paw的开发离不开以下开源项目</p>
         <br/>
 
-        <List bordered className="mr-auto ml-auto" style={{ maxWidth: "400px" }}>
+        <List bordered className="mr-auto ml-auto">
             <List.Item><OSProject name="webpack/webpack" desc="A bundler for javascript and friends." url="https://webpack.js.org/" license="MIT" /></List.Item>
             <List.Item><OSProject name="facebook/react" desc="A declarative, efficient, and flexible JavaScript library for building user interfaces." url="https://reactjs.org/" license="MIT" /></List.Item>
             <List.Item><OSProject name="ReactTraining/react-router" desc="Declarative routing for React" url="https://reacttraining.com/react-router/" license="MIT" /></List.Item>

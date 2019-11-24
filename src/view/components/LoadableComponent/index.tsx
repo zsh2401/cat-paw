@@ -35,7 +35,7 @@ export default class LoadableComponent extends React.Component<LoadableComponent
             statusArg:arg
         });
     }
-    componentDidMount(){
+    componentWillMount(){
         if(this.props.loader){
             this.loadAsync(this.props.loader);
         }else if(this.props.modulePath){
@@ -80,7 +80,7 @@ export default class LoadableComponent extends React.Component<LoadableComponent
                 }catch(err){
                     reject(err);
                 }
-            },this.props.delay || 1)
+            },this.props.delay || 0)
         });
     }
     render(){

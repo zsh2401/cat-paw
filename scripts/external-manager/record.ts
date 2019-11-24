@@ -20,6 +20,10 @@ const record: IRecord = {
 
 
     "swiper_css": { contentURL: "https://unpkg.com/swiper/css/swiper.min.css" },
-    "swiper": { alias:"Swiper",contentURL: "https://unpkg.com/swiper/js/swiper.min.js" },
+    "swiper": { alias: "Swiper", contentURL: "https://unpkg.com/swiper/js/swiper.min.js" },
+
+    "leancloud-storage": { alias: "AV", contentURL: "https://cdn.jsdelivr.net/npm/leancloud-storage@4.0.0/dist/av-min.js" },
+    "valine": { alias: "Valine", contentURL: "https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js" }
+
 }
 export default record;

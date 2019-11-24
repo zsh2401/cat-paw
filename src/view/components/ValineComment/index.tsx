@@ -1,15 +1,14 @@
-const APP_ID = "";
-const APP_KEY = "";
+const APP_ID = "2CqAAvg27W6dKBirB7aUpgn8-gzGzoHsz";
+const APP_KEY = "Df81krAxCYlu9N7q22fwHe5y";
 const PLACE_HOLDER = "说点什么吧!";
 
 
 
 import React from 'react'
 import idm from '../../../common/id-manager'
+import "leancloud-storage"
 //@ts-ignore
-// import AV from "leancloud-storage"
-//@ts-ignore
-// import Valine from 'valine'
+import Valine from 'valine'
 export interface ValineCommentProps{
     path?:string;
 }

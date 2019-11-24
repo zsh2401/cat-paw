@@ -1,10 +1,10 @@
 .head{
-    /* background-image: linear-gradient( 135deg, #F5CBFF 10%, #C346C2 100%); */
-    background-image: url('./img/wallhaven-r7vv3w.jpg');
+    background-image: url('./img/photo-of-clouds-during-dawn-3227984.jpg');
     background-size: cover;
     background-attachment:fixed;
     background-position-y: center;
-    height: 50vh;
+    background-position-x: center;
+    height: 40vh;
     display: flex;
     flex-direction: column;
 }
