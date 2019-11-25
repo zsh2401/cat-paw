@@ -1,6 +1,4 @@
 const _______DEBUG_SLIDE________ = 0;
-
-
 import React, { useState } from 'react'
 import { useEffectOnce } from 'react-use';
 import Swiper from 'swiper'
@@ -16,9 +14,9 @@ import P9 from './P9';
 import P10 from './P10';
 import P11 from './P11';
 import LazyLoad from './LazyLoad';
+import useBackToTop from '../../../common/hooks/useBackToTop';
 
 export default function FlowPage() {
-
     let element: HTMLDivElement;
     let swiper: Swiper;
 

@@ -38,7 +38,7 @@ export default function (props: StdProps) {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
-                        <BilibiliVideo name="fuck" src="//player.bilibili.com/player.html?aid=67218266&cid=116551899&page=1" />
+                        <BilibiliVideo name="fuck" src="https://player.bilibili.com/player.html?aid=67218266&cid=116551899&page=1" />
                         <br />
                         <Button style={{ visibility: displayPauseBtn ? "visible" : "collapse" }} className="d-block mr-auto ml-auto border-white text-white" appearance="ghost" onClick={pauseAllAudio}>暂停音乐</Button>
                     </div>

@@ -12,6 +12,7 @@
   "scripts": {
     "serv": "ts-node --project ./scripts/server/tsconfig.json  ./scripts/server",
     "deploy": "node ./scripts/deploy.js",
+    "build:android": "cross-env TS_NODE_PROJECT=\"./scripts/tsconfig-for-webpack-config.json\" BUILD4ANDROID=true webpack --config ./scripts/webpack.config.android.ts",
     "build": "cross-env TS_NODE_PROJECT=\"./scripts/tsconfig-for-webpack-config.json\" webpack --config ./scripts/webpack.config.prod.ts",
     "build:dev": "cross-env TS_NODE_PROJECT=\"./scripts/tsconfig-for-webpack-config.json\" webpack --config ./scripts/webpack.config.dev.ts",
     "start": "cross-env TS_NODE_PROJECT=\"./scripts/tsconfig-for-webpack-config.json\" webpack-dev-server --config ./scripts/webpack.config.dev.ts",

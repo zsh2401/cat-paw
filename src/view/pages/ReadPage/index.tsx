@@ -5,7 +5,9 @@ import NavBar from '../../components/NavBar'
 import { LodableComponent } from '../../components'
 import Letters from './Letters'
 import Tea from './Tea'
+import useBackToTop from '../../../common/hooks/useBackToTop'
 export default function ReadPage({ match }: any) {
+    useBackToTop();
     return <AppTemplate container={false} nonavbar>
         <NavBar className="sticky-top"></NavBar>
         <Switch>

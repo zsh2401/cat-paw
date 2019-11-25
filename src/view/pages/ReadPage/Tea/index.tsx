@@ -5,7 +5,7 @@ export default function Tea() {
     return <div className="container">
         <div className="mr-auto ml-auto" style={{ maxWidth: "650px", marginTop: "30px" }}>
             <Panel header={<b>KISS</b>} shaded bordered>
-                <BilibiliVideo borderRadius="10px" style={{ borderRadius: "5px" }} src="//player.bilibili.com/player.html?aid=67218302&cid=116551955&page=1" />
+                <BilibiliVideo borderRadius="10px" style={{ borderRadius: "5px" }} src="https://player.bilibili.com/player.html?aid=67218302&cid=116551955&page=1" />
             </Panel>
 
             <Panel header={<b>真心的价值?</b>} shaded bordered collapsible>
@@ -20,7 +20,7 @@ export default function Tea() {
 
             <Panel header={<b>Across the galaxy together</b>} shaded bordered>
                 银河系漫游指南是一部经典的小说,在其翻拍电影版中,男女主的爱也可谓是令人羡慕的。
-                <BilibiliVideo borderRadius="10px" style={{ borderRadius: "5px" }} src="//player.bilibili.com/player.html?aid=67218148&cid=116551745&page=1" />
+                <BilibiliVideo borderRadius="10px" style={{ borderRadius: "5px" }} src="https://player.bilibili.com/player.html?aid=67218148&cid=116551745&page=1" />
             </Panel>
 
             <Panel header={<b>滑宝在性格上的问题</b>} shaded bordered collapsible>
@@ -36,7 +36,7 @@ export default function Tea() {
             </Panel>
 
             <Panel header={<b>终相见</b>} shaded bordered>
-                <BilibiliVideo borderRadius="10px" style={{ borderRadius: "5px" }} src="//player.bilibili.com/player.html?aid=67218845&cid=116552810&page=1" />
+                <BilibiliVideo borderRadius="10px" style={{ borderRadius: "5px" }} src="https://player.bilibili.com/player.html?aid=67218845&cid=116552810&page=1" />
                 如果以秒速五厘米的速度行进，在我们相识的六年里，已经走过9460公里，也就是说，已经走过4个两千米。第一个两千千米，你爱上了我，第二个两千千米我们做出青涩的约定，第三个两千千米我们阔别许久，第四个两千千米，我们心的距离只有5厘米。我坚信，下一个两千千米时，我们身体的距离将不足一厘米，因为呀，我正在紧紧地抱着你
             </Panel>
 

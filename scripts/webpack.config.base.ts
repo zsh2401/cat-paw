@@ -57,7 +57,7 @@ const config: webpack.Configuration = {
 					{
 						loader: 'url-loader',
 						options: {
-							limit: 10 * 1000 * 1000,
+							limit: 200 * 1000,
 							name: "images/[name].[hash:8].[ext]"
 						}
 					},
@@ -140,7 +140,7 @@ const config: webpack.Configuration = {
 		// 	maxChunks: 2,
 		// }),
 		new CleanWebpackPlugin(),
-		// new BundleAnalyzerPlugin(),
+		new BundleAnalyzerPlugin(),
 		new OfflinePlugin({
 			caches: "all",
 			externals: em.urls

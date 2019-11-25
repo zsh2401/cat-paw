@@ -7,12 +7,14 @@ import AppTemplate from '../../components/AppTemplate';
 import NavBar from '../../components/NavBar';
 import { ValineComment } from '../../components';
 import { Divider } from 'rsuite';
+import useBackToTop from '../../../common/hooks/useBackToTop';
 export default function IndexPage() {
+  useBackToTop();
   return <AppTemplate nonavbar container={false}>
 
     <div className={`${style.head}`} >
 
-      <NavBar noIcon className="flex-grow-0 bg-transparent navbar-dark position-sticky" />
+      {/* <NavBar noIcon className="flex-grow-0 bg-transparent navbar-dark position-sticky" /> */}
 
       <div className={`${style.titleWrapper} container`}>
         <h1 className={`d-none d-sm-block ${style.title}`}>Lee Yin's Cat Paw</h1>
@@ -37,7 +39,7 @@ export default function IndexPage() {
 
       {/* <p className="text-center"></p> */}
       <Divider>畅所 · 欲言</Divider>
-      <ValineComment/>
+      <ValineComment path="/"/>
     </div>
   </AppTemplate>
 }

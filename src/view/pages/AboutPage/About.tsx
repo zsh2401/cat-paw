@@ -7,7 +7,9 @@ import NavBar from '../../components/NavBar'
 import debugMx from '../../../common/debug-mx'
 import { Avatar, Divider } from 'rsuite'
 import { Link } from 'react-router-dom'
+import useBackToTop from '../../../common/hooks/useBackToTop'
 export default function AboutPage() {
+    useBackToTop();
     return <AppTemplate nonavbar container={false}>
         <NavBar className="sticky-top" />
         <div className="min-h-100 container d-flex flex-column justify-content-center">

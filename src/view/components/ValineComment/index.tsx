@@ -3,10 +3,11 @@ const APP_KEY = "Df81krAxCYlu9N7q22fwHe5y";
 const PLACE_HOLDER = "说点什么吧!";
 
 
-
 import React from 'react'
 import idm from '../../../common/id-manager'
-import "leancloud-storage"
+
+//@ts-ignore
+window.AV = require('leancloud-storage')
 //@ts-ignore
 import Valine from 'valine'
 export interface ValineCommentProps{
@@ -17,6 +18,7 @@ export default class ValineComment extends React.Component<ValineCommentProps>{
     componentDidMount(){
         //@ts-ignore
         new Valine({
+            
             el:"#" + this.id,
             appId:APP_ID,
             appKey:APP_KEY,
