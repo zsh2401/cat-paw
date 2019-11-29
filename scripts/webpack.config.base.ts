@@ -140,7 +140,7 @@ const config: webpack.Configuration = {
 		// 	maxChunks: 2,
 		// }),
 		new CleanWebpackPlugin(),
-		new BundleAnalyzerPlugin(),
+		// new BundleAnalyzerPlugin(),
 		new OfflinePlugin({
 			caches: "all",
 			externals: em.urls

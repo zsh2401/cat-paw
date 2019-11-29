@@ -13,8 +13,9 @@
     "strictBindCallApply": true,
     "noImplicitAny": true,
     "noImplicitReturns":true,
-    "allowSyntheticDefaultImports":true
+    "allowSyntheticDefaultImports":true,
+    "skipLibCheck": true,
   },
-  "include": ["./src/*", "src/app/server.ts"],
-  "exclude": ["node_modules"]
+  "include": ["./src"],
+  "exclude": ["node_modules/*"]
 }
