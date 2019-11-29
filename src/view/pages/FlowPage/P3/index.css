@@ -1,0 +1,20 @@
+.bg{
+    animation-name:bgTuring ;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+}
+.color{
+    animation-name:colorTuring ;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+}
+@keyframes bgTuring
+{
+from {background: white;}
+to {background: black;}
+}
+@keyframes colorTuring
+{
+from {color:black;}
+to {color:white;}
+}

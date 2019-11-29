@@ -1,10 +1,12 @@
 // console.log("wtf");
 import OfflinePluginRuntime from 'offline-plugin/runtime'
-import * as topPace from '../../common/view-helper/top-pace'
+// import * as topPace from '../../common/view-helper/top-pace'
 import externalLoader from '../../common/external-loader';
+import { fetchText } from '../../common/external-loader/fetcher';
+import { injectScript, injectStyle } from '../../common/external-loader/injector';
 class AppLoader {
     public async run() {
-        await topPace.init(document.querySelector("#__global-pace") as HTMLDivElement);
+        // await topPace.init(document.querySelector("#__global-pace") as HTMLDivElement);
         await this.installSWIfNeed();
         await this.loadLib();
         // if(thereIsHomePage() && process.env.NODE_ENV === "production"){
@@ -24,28 +26,37 @@ class AppLoader {
         const contents: string[] = ___CONTENT_URLS;
         const percentSpan = [20, 80];
         const everyStepPercent = parseInt(((percentSpan[1] - percentSpan[0]) * 1.0 * (1.0 / contents.length)).toFixed(0));
+        const promises: Array<Promise<string>> = [];
         for (let i = 0; i < contents.length; i++) {
             let crt = contents[i];
-            await externalLoader(crt);
-            // this.percent = this.percent + everyStepPercent;
+            promises.push(fetchText(crt));
+        }
+        let res = await Promise.all(promises);
+        for (let i = 0; i < contents.length; i++) {
+            if (contents[i].endsWith(".css")) {
+                injectStyle(res[i])
+            } else {
+                injectScript(res[i])
+            }
         }
     }
     // @percentSpan(null, 100)
     private async loadApp() {
-        try{
-            await import(/*webpackChunkName:"app"*/"../App")
-        }catch(err){
+        try {
+            await import( /*webpackChunkName:"app" */ "../App")
+        } catch (err) {
             console.error(err);
         }
     }
     private get percent() {
-        return topPace.percentGetter();
+        return 0;
+        // return topPace.percentGetter();
     }
-    private async setPercentAsync(value:number){
-        topPace.percentSetterAnimated(value);
+    private async setPercentAsync(value: number) {
+        // topPace.percentSetterAnimated(value);
     }
     private set percent(value: number) {
-        topPace.percentSetterAnimated(value);
+        // topPace.percentSetterAnimated(value);
     }
 }
 new AppLoader().run();
@@ -57,10 +68,10 @@ function percentSpan(startPercent: number | null, finishedPercent: number) {
             if (startPercent) {
                 target.percent = startPercent;
             }
-            let ret:any;
-            try{
+            let ret: any;
+            try {
                 ret = await raw.apply(target, args);
-            }catch(err){
+            } catch (err) {
                 throw err;
             }
             await target.setPercentAsync(finishedPercent);

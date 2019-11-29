@@ -7,6 +7,9 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
 import em from './external-manager'
+
+const COMPRESS_IMGS = true;
+const NOW = new Date();
 const config: webpack.Configuration = {
 	entry: {
 		apploader: path.resolve(__dirname, '../src/app/app-loader'),
@@ -17,9 +20,9 @@ const config: webpack.Configuration = {
 		filename: 'js/[name].bundle.[hash].js',
 		chunkFilename: 'js/[name].chunk.[hash].js',
 		path: path.resolve(__dirname, '../dist'),
-		publicPath: "/",
+		// publicPath: "/",
 	},
-	
+
 	externals: em.externals,
 
 	module: {
@@ -50,8 +53,44 @@ const config: webpack.Configuration = {
 
 			{
 				test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)?$/,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {
+							limit: 200 * 1000,
+							name: "images/[name].[hash:8].[ext]"
+						}
+					},
+					{
+						loader: "image-webpack-loader",
+						options: {
+							mozjpeg: {
+								progressive: true,
+								quality: 65
+							},
+							// optipng.enabled: false will disable optipng
+							optipng: {
+								enabled: true,
+							},
+							pngquant: {
+								quality: [0.65, 0.90],
+								speed: 4
+							},
+							gifsicle: {
+								interlaced: false,
+							},
+							// // the webp option will enable WEBP
+							// webp: {
+							// 	quality: 75
+							// }
+						}
+					}
+				]
+			},
+			{
+				test: /\.mp3?$/,
 				use: {
-					loader: 'url-loader?limit=100000&name=images/[name]_[hash:8].[ext]'
+					loader: 'file-loader?name=assets/[name]_[hash:8].[ext]'
 				}
 			},
 		]
@@ -61,7 +100,8 @@ const config: webpack.Configuration = {
 	plugins: [
 		new webpack.ProgressPlugin(),
 		new webpack.DefinePlugin({
-			"___CONTENT_URLS": JSON.stringify(em.urls)
+			"___CONTENT_URLS": JSON.stringify(em.urls),
+			"___COMPILED_DATE": JSON.stringify(NOW.toLocaleString())
 		}),
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, "../src/app/AppPage.ejs"),
@@ -96,10 +136,11 @@ const config: webpack.Configuration = {
 				to: path.resolve(__dirname, "../dist/manifest.json")
 			},
 		]),
-		new CleanWebpackPlugin(),
-		// new BundleAnalyzerPlugin({
-		// 	analyzerMode:"static"
+		// new webpack.optimize.LimitChunkCountPlugin({
+		// 	maxChunks: 2,
 		// }),
+		new CleanWebpackPlugin(),
+		new BundleAnalyzerPlugin(),
 		new OfflinePlugin({
 			caches: "all",
 			externals: em.urls

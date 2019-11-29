@@ -1,16 +1,17 @@
 import React from 'react'
-import { Template } from '../../components'
+import {  LodableComponent } from '../../components'
 import { Switch, Route } from 'react-router'
 import Clock from './Clock'
-import Links from './Links'
+import useBackToTop from '../../../common/hooks/useBackToTop'
 export default function FragmentPage({match}:any){
-    return <Template>
-        <Switch>
-            <Route exact path={`${match.url}/loveclock`} component={Clock}></Route>
-            <Route exact path={`${match.url}/links`} component={Links}></Route>
+    useBackToTop();
+    return<Switch>
+            <Route exact path={`${match.url}/loveclock`} component={GClock}></Route>
         </Switch>
-    </Template>
 }
-function Main(){
-    return <div>F-Main</div>
+// function GClock(){
+//     return <LodableComponent loader={()=>import(/*webpackChunkName:"clock" */"./Clock")}/>
+// }
+function GClock(){
+    return <Clock/>
 }

@@ -12,6 +12,7 @@ function isDev(): boolean {
 export function getRawPkgInfo(): any {
     return packageInfo;
 }
+declare const ___COMPILED_DATE:string;
 export default {
     IS_DEV: isDev(),
     VERSION: packageInfo.version,
@@ -23,4 +24,5 @@ export default {
     SZ_RAT_DESC: packageInfo.sz_rat.description,
     SZ_RAT_REPO: packageInfo.sz_rat.repo,
     SZ_RAT_AUTHOR: "zsh2401",
+    COMPILED_DATE: ___COMPILED_DATE
 }

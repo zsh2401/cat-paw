@@ -1,0 +1,13 @@
+.bg{
+    background: url(./wallhaven-r2ez6m.jpg);
+    background-size: cover;
+    color: white;
+    animation-name: bgAnimation;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+}
+@keyframes bgAnimation{
+    from{background-position-x: right; }
+    to{background-position-x: left; }
+}

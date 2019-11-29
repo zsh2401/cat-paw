@@ -1,7 +1,8 @@
 import React from 'react';
 import historyManager from '../common/history-manager';
 import { Router, Route, Switch } from 'react-router';
-import { IndexPage, NotFoundPage } from '../view/pages';
+import IndexPage from '../view/pages/IndexPage';
+import NotFoundPage from '../view/pages/NotFoundPage'
 import AboutPage from '../view/pages/AboutPage';
 import FragmentPage from '../view/pages/FragmentPage';
 import ReadPage from '../view/pages/ReadPage';

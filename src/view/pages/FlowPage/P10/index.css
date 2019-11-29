@@ -1,0 +1,16 @@
+.picBg{
+    background-image: url(./assets/wallhaven-2ko3px.jpg);
+    background-size: cover;
+    animation-name: bgAnimation;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    color: white;
+}
+/* .bg{
+    background: transparent;
+} */
+@keyframes bgAnimation{
+    from{background-position-x: left;}
+    to{background-position-x: center;}
+}

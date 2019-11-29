@@ -10,15 +10,14 @@ export interface BCardProps extends StdProps {
 }
 const BCardOuterStyle: CSSProperties = {
     // height: "100px",
+    cursor:"pointer",
     width: "100%",
 }
 const BCardInnerStyle: CSSProperties = {
     borderRadius: "3px",
-    margin: "10px",
+    margin: "5px",
     boxShadow: "0px 0px 3px black",
-    // height: "80px",
-    padding: "5px"
-    // width: "100%",
+    padding: "3px"
 }
 export default function (props: BCardProps) {
     let { name, description, to, style, external, ...attr } = props;
@@ -33,7 +32,7 @@ export default function (props: BCardProps) {
     }
 
     //@ts-ignore
-    return <div className="col-sm-6" style={BCardOuterStyle} onClick={pusher}>
+    return <div className="col-md-6" style={BCardOuterStyle} onClick={pusher}>
         <div style={style}  {...attr}>
             <h4>{name}</h4>
             <div>{description}</div>

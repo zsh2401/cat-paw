@@ -1,19 +1,26 @@
 import React from 'react'
-import { Template } from '../../components'
 import { Switch, Route } from 'react-router'
-import Promises from './Promises'
+import AppTemplate from '../../components/AppTemplate'
+import NavBar from '../../components/NavBar'
+import { LodableComponent } from '../../components'
 import Letters from './Letters'
-export default function ReadPage({match}:any){
-    console.log(match);
-    return <Template>
-        <h1>Read...</h1>
+import Tea from './Tea'
+import useBackToTop from '../../../common/hooks/useBackToTop'
+export default function ReadPage({ match }: any) {
+    useBackToTop();
+    return <AppTemplate container={false} nonavbar>
+        <NavBar className="sticky-top"></NavBar>
         <Switch>
-            <Route exact path={`${match.url}/`} component={Main}/>
-            <Route path={`${match.url}/loveletters`} component={Letters}/>
-            <Route path={`${match.url}/promises`} component={Promises}/>
+            <Route path={`${match.url}/loveletters`} component={GLetters} />
+            <Route path={`${match.url}/tea`} component={GTea} />
         </Switch>
-    </Template>
+    </AppTemplate>
 }
-function Main(){
-    return <div>Main</div>
+function GLetters(){
+    // return <LodableComponent loader={()=>import(/*webpackChunkName:"letters" */ "./Letters")}/>
+    return <Letters/>;
+}
+function GTea(){
+    // return <LodableComponent loader={()=>import(/*webpackChunkName:"tea" */"./Tea")}/>
+    return <Tea/>;
 }

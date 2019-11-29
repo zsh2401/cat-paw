@@ -1,0 +1,19 @@
+.bg{
+    animation-name: bgAnimation;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+}
+.f{
+    animation-name: bgAnimation;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes bgAnimation
+{
+    from {background: black;}
+    to {background: white;}
+}
+@keyframes colorAnimation{
+    from {background: white;}
+    to {background: black;}
+}
