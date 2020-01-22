@@ -12,7 +12,7 @@ export default function () {
         </div>
         <Divider>Anywhere but here</Divider>
         <div className="row">
-            <BCard external to="http://dream.zsh2401.top:1937" name="树屋" description={"Hey!我们的树屋已经长蜘蛛网了!回去康康吧~"} />
+            <BCard onClick={()=>alert("抱歉,您不可以访问树屋")} name="树屋" description={"Hey!我们的树屋已经长蜘蛛网了!回去康康吧~"} />
             <BCard external to="https://zsh2401.top" name="滑滑的博客" description={"\"山不在高，有仙则名。水不在深，有龙则灵。斯是陋室，惟吾德馨。\""} />
         </div>
     </div>
