@@ -136,11 +136,10 @@ const config: webpack.Configuration = {
 				to: path.resolve(__dirname, "../dist/manifest.json")
 			},
 		]),
-		// new webpack.optimize.LimitChunkCountPlugin({
-		// 	maxChunks: 2,
-		// }),
 		new CleanWebpackPlugin(),
-		// new BundleAnalyzerPlugin(),
+		new BundleAnalyzerPlugin({
+			analyzerMode: "static"
+		}),
 		new OfflinePlugin({
 			caches: "all",
 			// externals: em.urls

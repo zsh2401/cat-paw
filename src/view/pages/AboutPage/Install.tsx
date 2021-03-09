@@ -11,11 +11,11 @@ export default function InstallPWA() {
             </Panel>
 
             <Panel header={<b>iOS</b>} eventKey={2}>
-                通过Safari浏览器访问本站点,点击底部分享按钮->添加到桌面即可完成PWA安装。
+                通过Safari浏览器访问本站点,点击底部分享按钮，添加到桌面即可完成PWA安装。
             </Panel>
 
             <Panel header={<b>Android Chrome</b>} eventKey={3}>
-                通过Android Chrome浏览器访问本站点,点击右上角菜单->添加到桌面
+                通过Android Chrome浏览器访问本站点,点击右上角菜单，添加到桌面
             </Panel>
         </PanelGroup>
     </div>
