@@ -4,7 +4,7 @@ import { useTimer, useCountdown } from '../../../../common/timer'
 import { useHistory } from 'react-router-dom'
 import NavBar from '../../../components/NavBar'
 //@ts-ignore
-import bgImg from '!url-loader?limit=10000000!image-webpack-loader!./wallhaven-vmpljm.jpg'
+import bgImg from '!url-loader?limit=10000000!./wallhaven-vmpljm.jpg'
 export type Time = [string, string, string, string];
 const BEGIN = new Date(2019, 3, 14, 20, 0, 0);
 

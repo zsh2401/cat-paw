@@ -6,13 +6,13 @@ import CopyWebpackPlugin from 'copy-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
-import em from './external-manager'
+// import em from './external-manager'
 
 const COMPRESS_IMGS = true;
 const NOW = new Date();
 const config: webpack.Configuration = {
 	entry: {
-		apploader: path.resolve(__dirname, '../src/app/app-loader'),
+		apploader: path.resolve(__dirname, '../src/app/AppLoader'),
 		"404": path.resolve(__dirname, '../src/common/404redirector')
 	},
 
@@ -23,7 +23,7 @@ const config: webpack.Configuration = {
 		// publicPath: "/",
 	},
 
-	externals: em.externals,
+	// externals: em.externals,
 
 	module: {
 		rules: [
@@ -61,30 +61,30 @@ const config: webpack.Configuration = {
 							name: "images/[name].[hash:8].[ext]"
 						}
 					},
-					{
-						loader: "image-webpack-loader",
-						options: {
-							mozjpeg: {
-								progressive: true,
-								quality: 65
-							},
-							// optipng.enabled: false will disable optipng
-							optipng: {
-								enabled: true,
-							},
-							pngquant: {
-								quality: [0.65, 0.90],
-								speed: 4
-							},
-							gifsicle: {
-								interlaced: false,
-							},
-							// // the webp option will enable WEBP
-							// webp: {
-							// 	quality: 75
-							// }
-						}
-					}
+					// {
+					// 	loader: "image-webpack-loader",
+					// 	options: {
+					// 		mozjpeg: {
+					// 			progressive: true,
+					// 			quality: 65
+					// 		},
+					// 		// optipng.enabled: false will disable optipng
+					// 		optipng: {
+					// 			enabled: true,
+					// 		},
+					// 		pngquant: {
+					// 			quality: [0.65, 0.90],
+					// 			speed: 4
+					// 		},
+					// 		gifsicle: {
+					// 			interlaced: false,
+					// 		},
+					// 		// // the webp option will enable WEBP
+					// 		// webp: {
+					// 		// 	quality: 75
+					// 		// }
+					// 	}
+					// }
 				]
 			},
 			{
@@ -100,7 +100,7 @@ const config: webpack.Configuration = {
 	plugins: [
 		new webpack.ProgressPlugin(),
 		new webpack.DefinePlugin({
-			"___CONTENT_URLS": JSON.stringify(em.urls),
+			// "___CONTENT_URLS": JSON.stringify(em.urls),
 			"___COMPILED_DATE": JSON.stringify(NOW.toLocaleString())
 		}),
 		new HtmlWebpackPlugin({
@@ -143,7 +143,7 @@ const config: webpack.Configuration = {
 		// new BundleAnalyzerPlugin(),
 		new OfflinePlugin({
 			caches: "all",
-			externals: em.urls
+			// externals: em.urls
 		})
 	],
 
