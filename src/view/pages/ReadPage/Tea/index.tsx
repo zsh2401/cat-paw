@@ -23,6 +23,10 @@ export default function Tea() {
                 <BilibiliVideo borderRadius="10px" style={{ borderRadius: "5px" }} src="https://player.bilibili.com/player.html?aid=67218148&cid=116551745&page=1" />
             </Panel>
 
+            <Panel header={<b>至少有我</b>} shaded bordered collapsible>
+               宝宝别怕啦,我知道你一定考虑过许多消极的情况<br/>但请放心呀!那些情况中,都至少有我呀~
+            </Panel>
+            
             <Panel header={<b>滑宝在性格上的问题</b>} shaded bordered collapsible>
                 由于一些你知道的原因,滑宝的性格确实存在缺陷。<br />
                 自卑又自负<br />

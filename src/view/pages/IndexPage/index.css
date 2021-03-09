@@ -1,9 +1,7 @@
 .head{
     background-image: url('./img/photo-of-clouds-during-dawn-3227984.jpg');
     background-size: cover;
-    background-attachment:fixed;
     background-position-y: center;
-    background-position-x: center;
     height: 40vh;
     display: flex;
     flex-direction: column;
